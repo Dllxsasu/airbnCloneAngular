@@ -1,0 +1,158 @@
+
+<ion-content>
+    <div class="mainHeader">
+       
+        <picture _ngcontent-fev-c47="">
+            <source _ngcontent-fev-c47="" srcset="https://a0.muscache.com/im/pictures/57b9f708-bb12-498c-bc33-769f8fc43e63.jpg?im_w=2560 1x, https://a0.muscache.com/im/pictures/57b9f708-bb12-498c-bc33-769f8fc43e63.jpg?im_w=2560 2x" media="(min-width: 1440px)">
+            <source _ngcontent-fev-c47="" srcset="https://a0.muscache.com/im/pictures/57b9f708-bb12-498c-bc33-769f8fc43e63.jpg?im_w=960 1x, https://a0.muscache.com/im/pictures/57b9f708-bb12-498c-bc33-769f8fc43e63.jpg?im_w=1920 2x" media="(min-width: 950px)">
+            <source _ngcontent-fev-c47="" srcset="https://a0.muscache.com/im/pictures/e09893fc-1d02-49b2-befa-c4be7a57ed18.jpg?im_w=720 1x, https://a0.muscache.com/im/pictures/e09893fc-1d02-49b2-befa-c4be7a57ed18.jpg?im_w=1440 2x" media="(min-width: 744px)">
+            <source _ngcontent-fev-c47="" srcset="https://a0.muscache.com/im/pictures/0c38042b-8685-4180-8d9b-12a6892ac6d8.jpg?im_w=320 1x, https://a0.muscache.com/im/pictures/0c38042b-8685-4180-8d9b-12a6892ac6d8.jpg?im_w=720 2x">
+            <img _ngcontent-fev-c47="" aria-hidden="true" alt="" id="FMP-target" src="https://a0.muscache.com/im/pictures/0c38042b-8685-4180-8d9b-12a6892ac6d8.jpg?im_q=highq&amp;im_w=720" class="_dae4t6" >
+        </picture>
+        <ion-grid>
+            <ion-row class="ion-margin-top ion-padding-top ion-text-center ion-justify-content-center ion-align-items-center">
+                <ion-col class="ion-margin-top ion-padding-top ">
+                    <ion-text _ngcontent-jpv-c47="" color="dark" class="ion-color ion-color-dark">
+                        <p _ngcontent-jpv-c47="" class="ion-margin-top ion-padding-top">
+                            ¿No sabes a dónde ir? Perfecto !
+                        </p>
+                    </ion-text>
+                    <ion-button  routerLink="/{{places[0].name}}"  size="large" color="light" shape="round" tabindex="0" class="ion-color ion-color-light md button button-large button-round button-solid ion-activatable ion-focusable ">
+                        <span clas _ngcontent-jpv-c47="" class="ion-padding-horizontal">Busquemos a tu medida</span>
+                    </ion-button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+
+
+    
+    <ion-grid class="mainContent">
+        <!-- HEADER IMAGE-->
+        <ion-row>
+            <ion-col size="12">
+                <ion-text _ngcontent-jpv-c47="" color="dark" class="ion-color ion-color-dark">
+                    <h2 _ngcontent-jpv-c47="">Explorez les environs</h2>
+                </ion-text>
+            </ion-col>
+        </ion-row>
+        <!-- HEADER CITIES-->
+        <ion-row >
+            <ion-col size="3" *ngFor="let item of places">
+
+                <ion-item lines="none" routerLink="/{{item.name}}" >
+                    <ion-thumbnail _ngcontent-jpv-c47="" slot="start" >
+                        <ion-img _ngcontent-jpv-c47="" [src]="item.icon" ></ion-img>
+                    </ion-thumbnail>
+                    <ion-label _ngcontent-jpv-c47="" class="sc-ion-label-md-h sc-ion-label-md-s">
+                        <h3 _ngcontent-jpv-c47=""> {{item.name}} </h3><p _ngcontent-jpv-c47="">{{item.dist}}</p>
+                    </ion-label>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <!-- HEADER TRENDS-->
+
+        <ion-row _ngcontent-jpv-c47="" class="ion-margin-top ion-padding-top md hydrated">
+            <ion-col _ngcontent-jpv-c47="" size="12" class="ion-padding-top" >
+                <ion-text _ngcontent-jpv-c47="" color="dark" class="ion-color ion-color-dark md hydrated">
+                    <h2 _ngcontent-jpv-c47="">Chez vous, partout</h2>
+                </ion-text>
+            </ion-col>
+            <ion-col class="placeItem" size="3" routerLink="/{{item.name}}" *ngFor="let item of items">
+                <ion-card >
+                    <ion-img [src]="item.icon"></ion-img>
+                </ion-card><div _ngcontent-jpv-c47="">
+                    <ion-text><p style="text-align: center;">{{item.name}}</p></ion-text>
+                </div>
+            </ion-col>
+            </ion-row>
+        <ion-row>
+            
+            <ion-col size="12" class="ion-padding-top ">
+                <ion-grid  class="becomeHost " style="background-image: url(../../../../assets/icons/home-005.webp );">
+                    <ion-row class="ion-padding ion-justify-content-start ion-align-items-center" >
+                        <ion-col size="4"  class="ioin-margin ion-padding ion-text-start">
+                            <ion-text color="light" class="ion-color ion-color-light ">
+                                <h2 > Convertirse en anfintrion</h2><p> Obtenga ingresos adicionales y aproveche nuevas oportunidades alquilando su casa. </p>
+                            </ion-text>
+                            <a _ngcontent-jpv-c47="" href="https://fr.airbnb.ch/host/homes" target="_blank" class="ion-button">
+                                <ion-button color="light" ><small >Mas informacion</small>
+                                </ion-button>
+                            </a>
+                        </ion-col>
+
+                    </ion-row>
+                </ion-grid>
+            </ion-col>
+
+        </ion-row>
+
+        <ion-row>
+            <ion-col></ion-col>
+        </ion-row>
+
+    </ion-grid>
+    <ion-grid class="mainFooter ">
+        <ion-row class="ion-padding">
+            <ion-col size="3">
+                <ion-text _ngcontent-amc-c47="" color="dark"><h3 >À PROPOS</h3></ion-text>
+                <ul _ngcontent-amc-c47="">
+                    <li _ngcontent-amc-c47=""> Fonctionnement d'Airbnb </li>
+                    <li _ngcontent-amc-c47=""> Newsroom </li>
+                    <li _ngcontent-amc-c47=""> Airbnb 2021 </li>
+                    <li _ngcontent-amc-c47=""> Investisseurs </li>
+                    <li _ngcontent-amc-c47=""> Airbnb Plus </li>
+                    <li _ngcontent-amc-c47=""> Airbnb Luxe </li>
+                    <li _ngcontent-amc-c47=""> HotelTonight </li>
+                    <li _ngcontent-amc-c47=""> Airbnb for Work </li>
+                    <li _ngcontent-amc-c47=""> C'est possible, grâce aux hôtes </li>
+                    <li _ngcontent-amc-c47=""> Carrières </li><li _ngcontent-amc-c47=""> Lettre des fondateurs </li></ul>
+            </ion-col>
+
+            <ion-col size="3">
+                <ion-text _ngcontent-amc-c47="" color="dark"><h3 >À PROPOS</h3></ion-text>
+                <ul _ngcontent-amc-c47="">
+                    <li _ngcontent-amc-c47=""> Fonctionnement d'Airbnb </li>
+                    <li _ngcontent-amc-c47=""> Newsroom </li>
+                    <li _ngcontent-amc-c47=""> Airbnb 2021 </li>
+                    <li _ngcontent-amc-c47=""> Investisseurs </li>
+                    <li _ngcontent-amc-c47=""> Airbnb Plus </li>
+                    <li _ngcontent-amc-c47=""> Airbnb Luxe </li>
+                    <li _ngcontent-amc-c47=""> HotelTonight </li>
+                    <li _ngcontent-amc-c47=""> Airbnb for Work </li>
+                    <li _ngcontent-amc-c47=""> C'est possible, grâce aux hôtes </li>
+                    <li _ngcontent-amc-c47=""> Carrières </li><li _ngcontent-amc-c47=""> Lettre des fondateurs </li></ul>
+            </ion-col>
+
+            <ion-col size="3">
+                <ion-text _ngcontent-amc-c47="" color="dark"><h3 >À PROPOS</h3></ion-text>
+                <ul _ngcontent-amc-c47="">
+                    <li _ngcontent-amc-c47=""> Fonctionnement d'Airbnb </li>
+                    <li _ngcontent-amc-c47=""> Newsroom </li>
+                    <li _ngcontent-amc-c47=""> Airbnb 2021 </li>
+                    <li _ngcontent-amc-c47=""> Investisseurs </li>
+                    <li _ngcontent-amc-c47=""> Airbnb Plus </li>
+                    <li _ngcontent-amc-c47=""> Airbnb Luxe </li>
+                    <li _ngcontent-amc-c47=""> HotelTonight </li>
+                    <li _ngcontent-amc-c47=""> Airbnb for Work </li>
+                    <li _ngcontent-amc-c47=""> C'est possible, grâce aux hôtes </li>
+                    <li _ngcontent-amc-c47=""> Carrières </li><li _ngcontent-amc-c47=""> Lettre des fondateurs </li></ul>
+            </ion-col>
+
+            <ion-col size="3">
+                <ion-text _ngcontent-amc-c47="" color="dark"><h3 >À PROPOS</h3></ion-text>
+                <ul _ngcontent-amc-c47="">
+                    <li _ngcontent-amc-c47=""> Fonctionnement d'Airbnb </li>
+                    <li _ngcontent-amc-c47=""> Newsroom </li>
+                    <li _ngcontent-amc-c47=""> Airbnb 2021 </li>
+                    <li _ngcontent-amc-c47=""> Investisseurs </li>
+                    <li _ngcontent-amc-c47=""> Airbnb Plus </li>
+                    <li _ngcontent-amc-c47=""> Airbnb Luxe </li>
+                    <li _ngcontent-amc-c47=""> HotelTonight </li>
+                    <li _ngcontent-amc-c47=""> Airbnb for Work </li>
+                    <li _ngcontent-amc-c47=""> C'est possible, grâce aux hôtes </li>
+                    <li _ngcontent-amc-c47=""> Carrières </li><li _ngcontent-amc-c47=""> Lettre des fondateurs </li></ul>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
