@@ -1,5 +1,7 @@
 # AirbnClone
-
+Status: in progress,
+for install depencies 
+execute npm i
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.5.
 
 ## Development server
