@@ -1,5 +1,7 @@
-
-<ion-content>
+<ion-header>
+    <app-header [ionContent]="ionContent" [places]="places"></app-header>
+</ion-header>
+<ion-content #ionContent fullscreen="true" [scrollEvents]="true">
     <div class="mainHeader">
        
         <picture _ngcontent-fev-c47="">
@@ -32,7 +34,7 @@
         <ion-row>
             <ion-col size="12">
                 <ion-text _ngcontent-jpv-c47="" color="dark" class="ion-color ion-color-dark">
-                    <h2 _ngcontent-jpv-c47="">Explorez les environs</h2>
+                    <h2 _ngcontent-jpv-c47="">Explora los alrededores</h2>
                 </ion-text>
             </ion-col>
         </ion-row>
@@ -55,7 +57,7 @@
         <ion-row _ngcontent-jpv-c47="" class="ion-margin-top ion-padding-top md hydrated">
             <ion-col _ngcontent-jpv-c47="" size="12" class="ion-padding-top" >
                 <ion-text _ngcontent-jpv-c47="" color="dark" class="ion-color ion-color-dark md hydrated">
-                    <h2 _ngcontent-jpv-c47="">Chez vous, partout</h2>
+                    <h2 _ngcontent-jpv-c47="">En casa, en todas partes </h2>
                 </ion-text>
             </ion-col>
             <ion-col class="placeItem" size="3" routerLink="/{{item.name}}" *ngFor="let item of items">

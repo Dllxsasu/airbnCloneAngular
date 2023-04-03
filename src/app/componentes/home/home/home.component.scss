@@ -24,13 +24,7 @@
     -webkit-background-clip: text!important;
     }
 }
-.placeItem {
-    cursor: pointer;
-    transition: all .2s ease-in-out;
-}
-.placeItem:hover{
-    opacity: .6;
-}
+
 
 .becomeHost{
     position: relative;
@@ -50,6 +44,21 @@
 .mainContent {
     max-width: 1224px;
     margin: auto;
+
+    h2 {
+        margin: 1rem 0 0.5rem;
+        font-size: 2rem;
+    }
+    ion-item {
+        ---pading-start:0!important;
+    }
+    .placeItem {
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+    }
+    .placeItem:hover{
+        opacity: .6;
+    }
 }
 li{
     display: block;

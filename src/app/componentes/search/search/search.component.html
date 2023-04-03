@@ -1,0 +1,54 @@
+<ion-content class="ion-no-padding ion-no-margin">
+    <ion-grid class="ion-no-padding ion-no-margin">
+        <ion-row class="ion-no-padding ion-no-margin">
+            <ion-col class="ion-no-padding ion-no-margin">
+                <h1>Selecciona la casa que quiera alquilar</h1>
+                <ion-text color="medium">
+                    <p><small> Introduzca las fechas y el número de viajeros para ver el precio total por noche.</small></p>
+
+                </ion-text>
+            </ion-col>
+            <ion-col class="ion-no-padding ion-no-margin"> 
+                <ion-row class="item ion-no-padding ion-justify-content-start ion-align-items-center">
+                    <ion-col size="5">
+                        <ion-img></ion-img>
+                    </ion-col>
+                    <ion-col size="7">
+                        <div id="map-container" *ngIf="ready">
+                            <div id="map">
+                                <mgl-map
+      [style]="'mapbox://styles/mapbox/streets-v9'"
+      [zoom]="[9]"
+      [center]="[-74.5, 40]"
+    >
+    </mgl-map>
+                                <!---
+                                <mgl-map
+                                    [style]="'mapbox://styles/mapbox/streets-v9'"
+                                    [zoom]="[13]"
+                                    [center]="center"
+                                    end
+                                    (modeEnd)="searchResult($event)"
+                                    (nodeEnd)="searchResult($event)"
+                                    >
+                                    <mgl-marker
+                                        *ngFor="let marker of (filterdMarkers||[]).slice(MaxItemCount-maxItemCountPerPage, MaxItemCount)"
+                                        [lngLat]="marker.lngLat"
+                                    >
+                                        <div class="marker">
+                                            (click)="displayPopUp($event, marker)"
+                                            <div>
+                                                precio {{marker.price}}
+                                            </div>
+                                        </div>
+                                    </mgl-marker>
+                                 </mgl-map>
+                                 -->
+                            </div>
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
